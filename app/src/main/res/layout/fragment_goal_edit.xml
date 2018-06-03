@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="18dp">
+
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/textViewGoalCurrentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textSize="18sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Current weight -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/textViewGoalCurrentWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/weight" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                        <EditText
+                            android:id="@+id/editTextGoalCurrentWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="3"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:id="@+id/textViewGoalCurrentWeightType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kg" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+            <!-- //Current weight -->
+
+
+            <!-- Target weight -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewGoalTargetWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/target_weight" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/editTextGoalTargetWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="3"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:id="@+id/textViewTargetWeightType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kg" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+            <!-- //Target weight -->
+
+            <!-- Weekly goal -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewIWantTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_want_to" />
+
+                <Spinner
+                    android:id="@+id/spinnerIWantTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:entries="@array/array_weekly_goals"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" >
+
+                <TextView
+                    android:id="@+id/textViewWeeklyGoalB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weekly_goal" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                        android:id="@+id/spinnerWeeklyGoal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/array_weekly_goals_kg"
+                        />
+
+                        <TextView
+                            android:id="@+id/textViewKgEachWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kg_each_week" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+            <!-- //Weekly goal -->
+
+
+            <!-- Activity Level -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp" >
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_level"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinnerActivityLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_activity_levels" />
+
+            </TableRow>
+            <!-- //Activity Level -->
+
+
+        </TableLayout>
+        <!-- //My Goal -->
+
+
+        <!-- Submit button -->
+
+        <Button
+            android:id="@+id/buttonGoalSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/save" />
+
+        <!-- //Submit button -->
+
+
+
+
+        <!-- Numbers -->
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:stretchColumns="1">
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" >
+                <TextView
+                    android:id="@+id/textViewGoalNumbers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/numbers"
+                    android:textSize="18sp" />
+
+            </TableRow>
+        </TableLayout>
+        <!-- //Numbers -->
+
+        <!-- I want to loose -->
+        <TextView
+            android:id="@+id/textViewGoalNumbersIfYouWantToLooseWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/if_you_want_to_loose_weight"
+            android:textSize="16sp"
+            />
+        <!-- //I want to loose -->
+
+
+        <!-- I want to loose table layout -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Headcell -->
+            <TableRow
+                android:id="@+id/textViewGoalMethodRowA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewGoalMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blank" />
+
+                <TextView
+                    android:id="@+id/textViewGoalHeadcellEnergy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/energy" />
+
+                <TextView
+                    android:id="@+id/textViewGoalHeadcellProteins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/proteins" />
+
+                <TextView
+                    android:id="@+id/textViewGoalHeadcellCarbs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/carbs" />
+
+                <TextView
+                    android:id="@+id/textViewGoalHeadcellFat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/fat" />
+
+            </TableRow>
+            <!-- //Headcell -->
+
+            <!-- Loose with out activity -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewGoalMethodDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/without_activity" />
+
+                <TextView
+                    android:id="@+id/textViewGoalEnergyDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/energy" />
+
+                <TextView
+                    android:id="@+id/textViewGoalProteinsDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/proteins" />
+
+                <TextView
+                    android:id="@+id/textViewGoalCarbsDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/carbs" />
+
+                <TextView
+                    android:id="@+id/textViewGoalFatDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/fat" />
+
+            </TableRow>
+            <!-- //Loose with out activity -->
+
+            <!-- Loose with acitivty -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewGoalMethodWithActivityAndDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/with_activity_" />
+
+                <TextView
+                    android:id="@+id/textViewGoalEnergyWithActivityAndDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/energy" />
+
+                <TextView
+                    android:id="@+id/textViewGoalProteinsWithActivityAndDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/proteins" />
+
+                <TextView
+                    android:id="@+id/textViewGoalCarbsWithActivityAndDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/carbs" />
+
+                <TextView
+                    android:id="@+id/textViewGoalFatWithActivityAndDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/fat" />
+
+            </TableRow>
+            <!-- //With activity -->
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/textViewGoalNumbersIfYouWantToKeepYourWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/if_you_want_to_keep_your_weight"
+            android:textSize="16sp"
+            />
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Headcell -->
+            <TableRow
+                android:id="@+id/textViewGoalMethodRowB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewGoalMethodB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/blank" />
+
+                <TextView
+                    android:id="@+id/textViewGoalHeadcellEnergyB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/energy" />
+
+                <TextView
+                    android:id="@+id/textViewGoalHeadcellProteinsB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/proteins" />
+
+                <TextView
+                    android:id="@+id/textViewGoalHeadcellCarbsB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/carbs" />
+
+                <TextView
+                    android:id="@+id/textViewGoalHeadcellFatB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/fat" />
+
+            </TableRow>
+            <!-- //Headcell -->
+            <!-- BMR -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewGoalMethodBMR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/without_activity" />
+
+                <TextView
+                    android:id="@+id/textViewGoalEnergyBMR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/energy" />
+
+                <TextView
+                    android:id="@+id/textViewGoalProteinsBMR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/proteins" />
+
+                <TextView
+                    android:id="@+id/textViewGoalCarbsBMR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/carbs" />
+
+                <TextView
+                    android:id="@+id/textViewGoalFatBMR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/fat" />
+
+            </TableRow>
+            <!-- //BMR -->
+
+
+
+            <!-- with activity -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textViewGoalMethodWithActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/with_activity_" />
+
+                <TextView
+                    android:id="@+id/textViewGoalEnergyWithActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/energy" />
+
+                <TextView
+                    android:id="@+id/textViewGoalProteinsWithActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/proteins" />
+
+                <TextView
+                    android:id="@+id/textViewGoalCarbsWithActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/carbs" />
+
+                <TextView
+                    android:id="@+id/textViewGoalFatWithActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/fat" />
+
+            </TableRow>
+            <!-- //With activity -->
+        </TableLayout>
+        <!-- //Numbers -->
+
+        <!-- Calculation -->
+
+        <TextView
+            android:id="@+id/textViewCalculation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/blank"
+            android:textSize="18sp" />
+        <!-- //Calculation -->
+
+    </LinearLayout>
+
+</ScrollView>

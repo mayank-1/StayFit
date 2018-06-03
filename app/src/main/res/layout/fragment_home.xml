@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="13dp"
+        android:background="@color/colorAppBackground">
+
+        <!-- Todays result -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headcell">
+                    <TextView
+                        android:id="@+id/textViewHeadlineGoalWithActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/goal_with_activity"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/textViewHeadlineFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/food"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/textViewHeadlineSum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/sum"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/textViewBodyGoalWithActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/blank"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/textViewBodyFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/blank"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/textViewBodyRemaining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/blank"
+                        android:textSize="18sp" />
+                </TableRow>
+         </TableLayout>
+        <!-- //Todays result -->
+
+        <!-- Breakfast -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+
+                <TableRow
+                    android:id="@+id/tableRowHeadlineBreakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headcell">
+
+                    <ImageView
+                        android:id="@+id/imageViewAddBreakfast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_add_circle_grey" />
+
+                    <TextView
+                        android:id="@+id/textViewHeadlineBreakfast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/breakfast"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewEnergyBreakfast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="@string/energy"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/tableLayoutBreakfastItems"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            </TableLayout>
+        <!-- //Breakfast -->
+
+        <!-- Lunch -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TableRow
+                    android:id="@+id/tableRowHeadlineLunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headcell">
+
+                    <ImageView
+                        android:id="@+id/imageViewAddLunch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_add_circle_grey" />
+
+                    <TextView
+                        android:id="@+id/textViewHeadlineLunch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/lunch"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewEnergyLunch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="@string/energy"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/tableLayoutLunchItems"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            </TableLayout>
+        <!-- //Lunch -->
+
+        <!-- Before training -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TableRow
+                    android:id="@+id/tableRowHeadlineBeforeTraining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headcell">
+
+                    <ImageView
+                        android:id="@+id/imageViewAddBeforeTraining"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_add_circle_grey" />
+
+                    <TextView
+                        android:id="@+id/textViewHeadlineBeforeTraining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/before_training"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewEnergyBeforeTraining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="@string/energy"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/tableLayoutBeforeTrainingItems"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            </TableLayout>
+        <!-- //Before training -->
+
+        <!-- After training -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TableRow
+                    android:id="@+id/tableRowHeadlineAfterTraining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headcell">
+
+                    <ImageView
+                        android:id="@+id/imageViewAddAfterTraining"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_add_circle_grey"/>
+
+                    <TextView
+                        android:id="@+id/textViewHeadlineAfterTraining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/after_training"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewEnergyAfterTraining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="@string/energy"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/tableLayoutAfterTrainingItems"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            </TableLayout>
+        <!-- //After Training -->
+
+        <!-- Dinner -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TableRow
+                    android:id="@+id/tableRowHeadlineDinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headcell">
+
+                    <ImageView
+                        android:id="@+id/imageViewAddDinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_add_circle_grey"/>
+
+                    <TextView
+                        android:id="@+id/textViewHeadlineDinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/dinner"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewEnergyDinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="@string/energy"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/tableLayoutDinnerItems"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            </TableLayout>
+        <!-- //Dinner -->
+
+        <!-- Snacks -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TableRow
+                    android:id="@+id/tableRowHeadlineSnacks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headcell">
+
+                    <ImageView
+                        android:id="@+id/imageViewAddSnacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_add_circle_grey" />
+
+                    <TextView
+                        android:id="@+id/textViewHeadlineSnacks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/snacks"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewEnergySnacks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="@string/energy"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+            android:id="@+id/tableLayoutSnacksItems"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            </TableLayout>
+        <!-- //Snacks -->
+
+        <!-- Supper -->
+            <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TableRow
+                    android:id="@+id/tableRowHeadlineSupper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headcell">
+
+                    <ImageView
+                        android:id="@+id/imageViewAddSupper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_add_circle_grey"  />
+
+                    <TextView
+                        android:id="@+id/textViewHeadlineSupper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/supper"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewEnergySupper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAppDarkGrey"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="@string/energy"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+            android:id="@+id/tableLayoutSupperItems"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            </TableLayout>
+        <!-- //Supper -->
+
+    </LinearLayout>
+
+</ScrollView>

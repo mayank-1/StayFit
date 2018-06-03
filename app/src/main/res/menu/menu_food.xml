@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!-- Add -->
+    <item android:id="@+id/menu_action_food_add"
+        android:icon="@drawable/ic_menu_action_add"
+        android:title="@string/add"
+        app:showAsAction="always"/>
+
+    <!-- Edit -->
+    <item android:id="@+id/menu_action_food_edit"
+        android:icon="@drawable/ic_menu_action_edit"
+        android:title="@string/add"
+        app:showAsAction="always"/>
+
+
+    <!-- Delete -->
+    <item android:id="@+id/menu_action_food_delete"
+        android:icon="@drawable/ic_menu_action_delete"
+        android:title="@string/add"
+        app:showAsAction="always"/>
+
+
+</menu>

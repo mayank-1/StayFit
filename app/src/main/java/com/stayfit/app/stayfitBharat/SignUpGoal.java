@@ -1,4 +1,4 @@
-package com.stayfit.app.stayfit;
+package com.stayfit.app.stayfitBharat;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import com.stayfit.app.stayfit.R;
 
 /**
  * Created by bruker on 19.06.2017.

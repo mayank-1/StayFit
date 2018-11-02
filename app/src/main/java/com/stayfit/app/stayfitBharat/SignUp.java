@@ -1,14 +1,11 @@
-package com.stayfit.app.stayfit;
+package com.stayfit.app.stayfitBharat;
 
 /**
  * Created by bruker on 19.06.2017.
  */
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,8 +16,6 @@ import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import com.stayfit.app.stayfit.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

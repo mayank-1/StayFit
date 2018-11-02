@@ -1,4 +1,4 @@
-package com.stayfit.app.stayfit;
+package com.stayfit.app.stayfitBharat;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

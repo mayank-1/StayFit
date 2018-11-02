@@ -1,4 +1,4 @@
-package com.stayfit.app.stayfit;
+package com.stayfit.app.stayfitBharat;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.stayfit.app.stayfit.R;
 
 /**
  * Created by bruker on 22.06.2017.

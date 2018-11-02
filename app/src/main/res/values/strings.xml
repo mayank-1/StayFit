@@ -1,0 +1,182 @@
+<resources>
+    <string name="app_name">StayFit</string>
+    <string name="welcome_text">Welcome to Stayfit</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="height">Height</string>
+    <string name="activity_level">Activity level</string>
+    <string name="weight">Weight</string>
+    <string name="target_weight">Target weight</string>
+    <string name="mesurment">Mesurment</string>
+    <string name="cm">cm</string>
+    <string name="feet_inches">feet and inches</string>
+    <string name="kg">kg</string>
+    <string name="pound">pound</string>
+    <string name="activities">Activities</string>
+    <string name="nearbyPlaces">Nearby Places</string>
+
+    <!--Shared Preferences Variables-->
+    <string name="user_weight"></string>
+    <string name="user_height"></string>
+
+
+    <string-array name="array_mesurments">
+        <item>Metric</item>
+        <item>Imperial</item>
+    </string-array>
+
+    <string name="metric">Metric</string>
+    <string name="imperial">Imperial</string>
+
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+
+    <string-array name="array_months">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+    <string name="blank"> </string>
+
+
+    <string-array name="array_activity_levels">
+        <item>Little to no exercise</item>
+        <item>Light exercise (1–3 days per week)</item>
+        <item>Moderate exercise (3–5 days per week)</item>
+        <item>Heavy exercise (6–7 days per week)</item>
+        <item>Very heavy exercise (twice per day, extra heavy workouts)</item>
+    </string-array>
+
+    <string name="i_want_to">I want to</string>
+    <string name="i_want">I want</string>
+    <string name="sign_up">Sign up</string>
+
+    <string name="weekly_goal">Weekly goal</string>
+
+
+    <string-array name="array_weekly_goals">
+        <item>loose weight</item>
+        <item>gain weight</item>
+    </string-array>
+
+    <string-array name="array_weekly_goals_kg">
+        <item>0.5</item>
+        <item>1</item>
+        <item>1.5</item>
+    </string-array>
+
+
+    <string name="kg_each_week">kg each week</string>
+    <string name="pounds_each_week">pounds each week</string>
+
+    <string name="lets_go">Lets go!</string>
+
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="goal">Goal</string>
+    <string name="categories">Categories</string>
+    <string name="food">Food</string>
+
+    <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="name">Name</string>
+    <string name="parent">Parent</string>
+    <string name="save">Save</string>
+    <string name="are_you_sure_you_want_to_delete">Are you sure you want to delete?</string>
+    <string name="cancel">Cancel</string>
+    <string name="calories_table">Calories table</string>
+    <string name="energy">Energy</string>
+    <string name="proteins">Proteins</string>
+    <string name="carbs">Carbs</string>
+    <string name="fat">Fat</string>
+    <string name="per_hundred_gran">Per 100 gram</string>
+    <string name="per_meal">Per meal</string>
+    <string name="manufactor">Manufactor</string>
+    <string name="about">About</string>
+    <string name="description">Description</string>
+    <string name="general">General</string>
+    <string name="serving">Serving</string>
+    <string name="number">Number</string>
+    <string name="word">Word</string>
+    <string name="barcode">Barcode</string>
+    <string name="category">Category</string>
+    <string name="main">Main</string>
+    <string name="sub">Sub</string>
+    <string name="current_status">Current status</string>
+    <string name="target">Target</string>
+    <string name="my_goal">My goal</string>
+    <string name="status">Status</string>
+    <string name="method">Method</string>
+    <string name="bmr">BMR</string>
+    <string name="numbers">Numbers</string>
+    <string name="diet">Diet</string>
+    <string name="with_activity">With activity</string>
+    <string name="with_activity_and_diet">With activity and diet</string>
+
+    <string name="if_you_want_to_keep_your_weight">If you want to keep your weight</string>
+    <string name="if_you_want_to_loose_weight">If you want to loose weight</string>
+    <string name="if_you_want_to">If you want to</string>
+    <string name="keep_your_weight">Keep your weight</string>
+    <string name="loose_x_kg_week_with_out_exercising">Loose x kg each week with out exercising</string>
+    <string name="without_activity">Without activity</string>
+    <string name="advanced">Advanced</string>
+    <string name="with_activity_">With activity</string>
+    <string name="edit">Edit</string>
+
+    <string name="password">Password</string>
+    <string name="alias">Alias</string>
+    <string name="activity">Activity</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="before_training">Before training</string>
+    <string name="after_training">After training</string>
+    <string name="dinner">Dinner</string>
+    <string name="snacks">Snacks</string>
+    <string name="supper">Supper</string>
+
+    <string name="portion_size">Portion size</string>
+    <string name="pcs">pcs</string>
+    <string name="gram">gram</string>
+    <string name="add_to_diary">Add to diary</string>
+    <string name="unlink">Unlink</string>
+    <string name="goal_with_activity">Goal with activity</string>
+    <string name="sum">Sum</string>
+    <string name="remaining">Remaining</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
+    <string name="select_meal">Select meal</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

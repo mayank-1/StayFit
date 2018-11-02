@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Search / will display always -->
+    <item android:id="@+id/menu_action_add_food"
+        android:icon="@drawable/ic_menu_action_restaurant_menu"
+        android:title="@string/add"
+        app:showAsAction="ifRoom"/>
+
+
+</menu>

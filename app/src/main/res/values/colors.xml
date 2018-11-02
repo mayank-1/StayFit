@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAppBackground">#ffffff</color>
+    <color name="colorAppDarkGrey">#262626</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="splashColor">#05c3f9</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorYellow">#FFFF00</color>
+    <color name="colorFuchsia">#FF00FF</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorSilver">#C0C0C0</color>
+    <color name="colorGray">#808080</color>
+    <color name="colorOlive">#808000</color>
+    <color name="colorPurple">#800080</color>
+    <color name="colorMaroon">#800000</color>
+    <color name="colorAqua">#00FFFF</color>
+    <color name="colorLime">#00FF00</color>
+    <color name="colorTeal">#008080</color>
+    <color name="colorGreen">#008000</color>
+    <color name="colorBlue">#0000FF</color>
+    <color name="colorNavy">#000080</color>
+    <color name="colorBlack">#000000</color>
+</resources>

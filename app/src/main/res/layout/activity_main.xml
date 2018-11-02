@@ -16,7 +16,8 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:src="@drawable/logo" />
+            android:src="@drawable/logo"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/tv"
@@ -24,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Welcome to StayFit"
+            android:text="@string/welcome_text"
             android:textColor="@color/colorWhite"
             android:textSize="23sp"
             android:textStyle="bold" />

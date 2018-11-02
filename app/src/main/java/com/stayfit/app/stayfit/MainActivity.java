@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity{
             Animation myAnim = AnimationUtils.loadAnimation(this,R.anim.mytransition);
             tv.startAnimation(myAnim);
             iv.startAnimation(myAnim);
-            final Intent i = new Intent(this,SignUp.class);
+            final Intent i = new Intent(this, WelcomeActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             i.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

@@ -58,10 +58,15 @@ public class SignUpGoal extends AppCompatActivity {
         EditText editTextTargetWeight = (EditText)findViewById(R.id.editTextTargetWeight);
         String stringTargetWeight = editTextTargetWeight.getText().toString();
         double doubleTargetWeight = 0;
-        try{
+
+        if (!stringTargetWeight.isEmpty()) {
             doubleTargetWeight = Double.parseDouble(stringTargetWeight);
-        }
-        catch(NumberFormatException nfe) {
+
+            //Target Weight cannot be 0
+            if (doubleTargetWeight == 0) {
+                errorMessage = "Target weight cannot be 0";
+            }
+        } else {
             errorMessage = "Target weight has to be a number.";
         }
 

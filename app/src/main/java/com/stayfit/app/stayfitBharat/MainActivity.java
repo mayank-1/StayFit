@@ -1,4 +1,4 @@
-package com.stayfit.app.stayfit;
+package com.stayfit.app.stayfitBharat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
-import com.stayfit.app.stayfit.R;
 
 import okhttp3.OkHttpClient;
 

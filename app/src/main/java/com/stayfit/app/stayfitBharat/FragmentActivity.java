@@ -1,6 +1,5 @@
-package com.stayfit.app.stayfit;
+package com.stayfit.app.stayfitBharat;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,10 +13,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-
-import com.stayfit.app.stayfit.R;
-
-import static java.lang.System.exit;
 
 public class FragmentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,

@@ -1,15 +1,15 @@
-package com.stayfit.app.stayfit;
+package com.stayfit.app.stayfitBharat;
 
 /**
  * Created by bruker on 19.06.2017.
  */
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,10 +20,10 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.stayfit.app.stayfit.R;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SignUp extends AppCompatActivity {
 
@@ -225,14 +225,6 @@ public class SignUp extends AppCompatActivity {
         TextView textViewErrorMessage = (TextView)findViewById(R.id.textViewErrorMessage);
         String errorMessage = "";
 
-        // Email
-        TextView textViewEmail = (TextView)findViewById(R.id.textViewEmail);
-        EditText editTextEmail = (EditText)findViewById(R.id.editTextEmail);
-        String stringEmail = editTextEmail.getText().toString();
-        if(stringEmail.isEmpty() || stringEmail.startsWith(" ")){
-            errorMessage = "Please fill inn an e-mail address.";
-        }
-
         // Date of Birth Day
         Spinner spinnerDOBDay = (Spinner)findViewById(R.id.spinnerDOBDay);
         String stringDOBDay = spinnerDOBDay.getSelectedItem().toString();
@@ -294,11 +286,39 @@ public class SignUp extends AppCompatActivity {
             stringGender = "female";
         }
 
+
+        // Email
+        TextView textViewEmail = (TextView) findViewById(R.id.textViewEmail);
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        String stringEmail = editTextEmail.getText().toString();
+
         /* Height */
         EditText editTextHeightCm = (EditText)findViewById(R.id.editTextHeightCm);
         EditText editTextHeightInches = (EditText)findViewById(R.id.editTextHeightInches);
         String stringHeightCm = editTextHeightCm.getText().toString();
         String stringHeightInches = editTextHeightInches.getText().toString();
+
+        // Weight
+        EditText editTextWeight = (EditText) findViewById(R.id.editTextWeight);
+        String stringWeight = editTextWeight.getText().toString();
+        double doubleWeight = 0;
+
+        if (stringEmail.isEmpty() || stringEmail.startsWith(" ")) {
+            errorMessage = "Please fill an e-mail address.";
+        } else if (!isValidEmail(stringEmail)) {
+            errorMessage = "Please enter a valid e-mail address";
+        }
+
+        if (!stringWeight.isEmpty()) {
+            doubleWeight = Double.parseDouble(stringWeight);
+
+            //Weight cannot be 0
+            if (doubleWeight == 0) {
+                errorMessage = "Weight cannot be 0";
+            }
+        } else {
+            errorMessage = "Weight has to be a number";
+        }
 
         double heightCm = 0;
         double heightFeet = 0;
@@ -312,38 +332,50 @@ public class SignUp extends AppCompatActivity {
         int intMesurment = spinnerMesurment.getSelectedItemPosition();
         if(intMesurment == 0){
             stringMesurment = "metric";
+            metric = true;
         }
         else{
             stringMesurment = "imperial";
             metric = false;
         }
-
-        if(metric == true) {
-
+        Log.e("Metric Value:", String.valueOf(metric));
+        if (metric) {
             // Convert CM
-            try {
+
+            if (!stringHeightCm.isEmpty()) {
                 heightCm = Double.parseDouble(stringHeightCm);
                 heightCm = Math.round(heightCm);
-            }
-            catch(NumberFormatException nfe) {
+
+                //Height cannot be 0
+                if (heightCm == 0) {
+                    errorMessage = "Height (cm) cannot be 0";
+                }
+            } else {
                 errorMessage = "Height (cm) has to be a number.";
             }
-        }
-        else {
-
+        } else {
             // Convert Feet
-            try {
+            if (!stringHeightCm.isEmpty()) {
                 heightFeet = Double.parseDouble(stringHeightCm);
-            }
-            catch(NumberFormatException nfe) {
+
+                //Height feet cannot be 0
+                if (heightFeet == 0) {
+                    errorMessage = "Height (feet) cannot be 0";
+                }
+            } else {
                 errorMessage = "Height (feet) has to be a number.";
             }
 
+
             // Convert inches
-            try {
+            if (!stringHeightInches.isEmpty()) {
                 heightInches = Double.parseDouble(stringHeightInches);
-            }
-            catch(NumberFormatException nfe) {
+
+                //Height inches cannot be 0
+                if (heightInches == 0) {
+                    errorMessage = "Height (inches) cannot be 0";
+                }
+            } else {
                 errorMessage = "Height (inches) has to be a number.";
             }
 
@@ -353,16 +385,70 @@ public class SignUp extends AppCompatActivity {
             heightCm = Math.round(heightCm);
         }
 
-        // Weight
-        EditText editTextWeight = (EditText)findViewById(R.id.editTextWeight);
-        String stringWeight = editTextWeight.getText().toString();
-        double doubleWeight = 0;
-        try {
-            doubleWeight = Double.parseDouble(stringWeight);
-        }
-        catch(NumberFormatException nfe) {
-            errorMessage = "Weight has to be a number.";
-        }
+
+//        if(metric == true) {
+//
+//            // Convert CM
+//            try {
+//                if (!stringHeightCm.isEmpty()) {
+//                    heightCm = Double.parseDouble(stringHeightCm);
+//                    heightCm = Math.round(heightCm);
+//
+//                    //Height cannot be 0
+//                    if (heightCm == 0) {
+//                        errorMessage = "Height (cm) cannot be 0";
+//                    }
+//                }
+//            }
+//            catch(NumberFormatException nfe) {
+//                errorMessage = "Height (cm) has to be a number.";
+//            }
+//        }
+//        else {
+//
+//            // Convert Feet
+//            try {
+//                if (!stringHeightCm.isEmpty()) {
+//                    heightFeet = Double.parseDouble(stringHeightCm);
+//
+//                    //Height feet cannot be 0
+//                    if (heightFeet == 0) {
+//                        errorMessage = "Height (feet) cannot be 0";
+//                    }
+//                }
+//
+//            }
+//            catch(NumberFormatException nfe) {
+//                errorMessage = "Height (feet) has to be a number.";
+//            }
+//
+//            // Convert inches
+//            try {
+//                if (!stringHeightInches.isEmpty()) {
+//                    heightInches = Double.parseDouble(stringHeightInches);
+//
+//                    //Height inches cannot be 0
+//                    if (heightInches == 0) {
+//                        errorMessage = "Height (inches) cannot be 0";
+//                    }
+//                }
+//
+//            }
+//            catch(NumberFormatException nfe) {
+//                errorMessage = "Height (inches) has to be a number.";
+//            }
+//
+//            // Need to convert, we want to save the number in cm
+//            // cm = ((foot * 12) + inches) * 2.54
+//            heightCm = ((heightFeet * 12) + heightInches) * 2.54;
+//            heightCm = Math.round(heightCm);
+//        }
+
+//        // Weight
+//        EditText editTextWeight = (EditText)findViewById(R.id.editTextWeight);
+//        String stringWeight = editTextWeight.getText().toString();
+//        double doubleWeight = 0;
+
         if(metric == true) {
         }
         else{
@@ -433,6 +519,13 @@ public class SignUp extends AppCompatActivity {
             imageViewError.setVisibility(View.VISIBLE);
             textViewErrorMessage.setVisibility(View.VISIBLE);
         }
+    }
+
+    public static boolean isValidEmail(CharSequence target) {
+        Pattern pattern = Patterns.EMAIL_ADDRESS;
+        Matcher matcher = pattern.matcher(target);
+        Log.e("Email Matcher Value:", String.valueOf(matcher.matches()));
+        return matcher.matches();
     }
 
     @Override

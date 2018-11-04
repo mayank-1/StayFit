@@ -1,4 +1,4 @@
-package com.stayfit.app.stayfit;
+package com.stayfit.app.stayfitBharat;
 
 import org.json.JSONArray;
 import org.json.JSONException;

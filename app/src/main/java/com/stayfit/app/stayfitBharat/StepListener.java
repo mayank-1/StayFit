@@ -1,4 +1,4 @@
-package com.stayfit.app.stayfit;
+package com.stayfit.app.stayfitBharat;
 
 /**
  * Created by mayank on 15/04/18.

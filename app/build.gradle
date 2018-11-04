@@ -4,11 +4,11 @@ android {
     compileSdkVersion 26
     buildToolsVersion '28.0.3'
     defaultConfig {
-        applicationId "com.stayfit.app.stayfit1"
+        applicationId "com.stayfit.app.stayfitBharat"
         minSdkVersion 23
         targetSdkVersion 26
-        versionCode 6
-        versionName "6.0"
+        versionCode 7
+        versionName "7"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

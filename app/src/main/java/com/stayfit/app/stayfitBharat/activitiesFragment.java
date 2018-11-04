@@ -9,12 +9,14 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -114,10 +116,11 @@ public class activitiesFragment extends Fragment implements SensorEventListener,
 
             @Override
             public void onClick(View arg0) {
-
+                //showing start message to the user
+                Snackbar snackbar = Snackbar.make(arg0, "Step Tracking Started!", Snackbar.LENGTH_LONG);
+                snackbar.show();
                 numSteps = 0;
                 sensorManager.registerListener(activitiesFragment.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
-
             }
         });
 
@@ -126,9 +129,10 @@ public class activitiesFragment extends Fragment implements SensorEventListener,
 
             @Override
             public void onClick(View arg0) {
-
+                //show stop message to the user
+                Snackbar snackbar = Snackbar.make(arg0, "Step Tracking Stopped!", Snackbar.LENGTH_LONG);
+                snackbar.show();
                 sensorManager.unregisterListener(activitiesFragment.this);
-
             }
         });
 

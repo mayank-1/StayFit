@@ -9,13 +9,13 @@ import com.google.android.gms.location.LocationListener;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -79,7 +79,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 else //Permission Denied
                 {
-                    Toast.makeText(this, "Permission Denied!",Toast.LENGTH_LONG).show();
+                    View view = new View(this);
+                    Snackbar snackbar = Snackbar.make(view, "Permission Denied!", Snackbar.LENGTH_LONG);
+                    snackbar.show();
                 }
                 return;
         }
@@ -104,6 +106,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void onClick (View view) {
 
+        Snackbar snackbar;
         Object dataTransfer[] = new Object[2];
         GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
         switch(view.getId()) {
@@ -146,7 +149,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Hospitals", Toast.LENGTH_LONG).show();
+                snackbar = Snackbar.make(view, "Showing Nearby Hospitals", Snackbar.LENGTH_LONG);
+                snackbar.show();
                 break;
             case R.id.B_restaurants:
                 mMap.clear();
@@ -155,7 +159,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Restaurant", Toast.LENGTH_LONG).show();
+                snackbar = Snackbar.make(view, "Showing Nearby Restaurant", Snackbar.LENGTH_LONG);
+                snackbar.show();
                 break;
             case R.id.B_school:
                 mMap.clear();
@@ -164,7 +169,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Schools", Toast.LENGTH_LONG).show();
+                snackbar = Snackbar.make(view, "Showing Nearby Schools", Snackbar.LENGTH_LONG);
+                snackbar.show();
                 break;
         }
     }

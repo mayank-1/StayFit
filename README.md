@@ -5,4 +5,6 @@ And one more thing during a workout or activity, if the user want to search for 
 
 It is also available on Google Play Store Go check it out : https://play.google.com/store/apps/details?id=com.stayfit.app.stayfitBharat
 
-I am making my college project open source as you can use it and also improve it.
+I am making my college project open source. So you can use it by forking it. 
+
+All the Pull Request Accepted!

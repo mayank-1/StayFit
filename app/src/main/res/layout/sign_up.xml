@@ -50,32 +50,26 @@
         </TableLayout>
         <!-- //Error handling -->
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:id="@+id/editTextEmail" />
+        </android.support.design.widget.TextInputLayout>
+
 
 
         <!-- Table layout -->
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <!-- Email -->
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <TextView
-                    android:id="@+id/textViewEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/email" />
-
-                <EditText
-                    android:id="@+id/editTextEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textEmailAddress" />
-            </TableRow>
-            <!-- //Email -->
 
             <!-- Date of Birth -->
             <TableRow
@@ -255,13 +249,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="12dp" >
 
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/weight"
-                    android:layout_marginTop="12dp" />
-
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -270,12 +257,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" >
 
-                        <EditText
-                            android:id="@+id/editTextWeight"
+                        <android.support.design.widget.TextInputLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:ems="3"
-                            android:inputType="number" />
+                            android:hint="Weight"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/editTextWeight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="3"
+                                android:inputType="number"
+                                android:maxLines="1" />
+                        </android.support.design.widget.TextInputLayout>
 
                         <TextView
                             android:id="@+id/textViewKg"
@@ -322,11 +317,6 @@
                     android:text="@string/blank"
                     android:layout_marginTop="12dp" />
 
-                <Button
-                    android:id="@+id/buttonSignUp"
-                    android:layout_width="148dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sign_up" />
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
@@ -336,9 +326,11 @@
 
             </TableRow>
             <!-- //Submit button -->
-
-
-
+            <android.support.design.button.MaterialButton
+                android:id="@+id/buttonSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up" />
         </TableLayout>
 
     </LinearLayout>

@@ -288,7 +288,6 @@ public class SignUp extends AppCompatActivity {
 
 
         // Email
-        TextView textViewEmail = (TextView) findViewById(R.id.textViewEmail);
         EditText editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         String stringEmail = editTextEmail.getText().toString();
 

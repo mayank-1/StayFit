@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 28
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.stayfit.app.stayfitBharat"
-        minSdkVersion 23
-        targetSdkVersion 26
-        versionCode 7
-        versionName "7"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 9
+        versionName "9"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -32,12 +32,15 @@ dependencies {
     })
 
 
-    implementation 'com.android.support:appcompat-v7:26.+'
-    implementation 'com.android.support:support-v4:26.+'
-    implementation 'com.android.support:design:26.+'
+    implementation 'com.android.support:appcompat-v7:28.+'
+    implementation 'com.android.support:support-v4:28.+'
+    implementation 'com.android.support:design:28.+'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.facebook.stetho:stetho:1.2.0'
     implementation 'com.facebook.stetho:stetho-okhttp3:1.4.1'
     testImplementation 'junit:junit:4.12'
-    
+
+    //MDC Dependencies
+    api 'com.android.support:design:28.0.0-alpha3'
+    implementation 'com.android.support:support-v4:28.0.0-aplha3'
 }

@@ -33,19 +33,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-
-                    <TextView
-                        android:id="@+id/textViewViewFoodName"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="8dp"
-                        android:text="@string/name" />
+                        android:hint="Name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                    <EditText
-                        android:id="@+id/editTextEditFoodName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10" />
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:ems="14"
+                            android:maxLines="1"
+                            android:id="@+id/editTextEditFoodName" />
+                    </android.support.design.widget.TextInputLayout>
                 </TableRow>
             <!-- //Headline -->
 
@@ -54,19 +55,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
-                <TextView
-                    android:id="@+id/textViewViewFoodManufactor"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/manufactor" />
+                    android:hint="Manufacturer"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <EditText
-                    android:id="@+id/editTextEditFoodManufactor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:ems="14"
+                        android:maxLines="1"
+                        android:id="@+id/editTextEditFoodManufactor" />
+                </android.support.design.widget.TextInputLayout>
+
             </TableRow>
             <!-- //Manufactor -->
 
@@ -76,18 +79,20 @@
                 android:layout_height="match_parent">
 
 
-                <TextView
-                    android:id="@+id/textViewViewFoodDescription"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/description" />
+                    android:hint="Description"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <EditText
-                    android:id="@+id/editTextEditFoodDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:ems="14"
+                        android:maxLines="1"
+                        android:id="@+id/editTextEditFoodDescription" />
+                </android.support.design.widget.TextInputLayout>
             </TableRow>
             <!-- //Description -->
 
@@ -96,20 +101,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
-                <TextView
-                    android:id="@+id/textViewEditFoodBarcode"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/barcode" />
+                    android:hint="Barcode"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <EditText
-                    android:id="@+id/editTextEditFoodBarcode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberSigned" />
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:ems="14"
+                        android:maxLines="1"
+                        android:id="@+id/editTextEditFoodBarcode" />
+                </android.support.design.widget.TextInputLayout>
             </TableRow>
             <!-- //Barcode -->
 

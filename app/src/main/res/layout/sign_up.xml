@@ -267,7 +267,7 @@
                                 android:id="@+id/editTextWeight"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:ems="3"
+                                android:ems="4"
                                 android:inputType="number"
                                 android:maxLines="1" />
                         </android.support.design.widget.TextInputLayout>
@@ -325,13 +325,14 @@
                     android:layout_marginTop="12dp" />
 
             </TableRow>
-            <!-- //Submit button -->
-            <android.support.design.button.MaterialButton
-                android:id="@+id/buttonSignUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sign_up" />
         </TableLayout>
+        <!-- //Submit button -->
+        <android.support.design.button.MaterialButton
+            android:id="@+id/buttonSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:text="@string/sign_up" />
 
     </LinearLayout>
 

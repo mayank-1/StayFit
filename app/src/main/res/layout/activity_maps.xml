@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_height="match_parent"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
 android:layout_width="match_parent"
 xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -32,6 +33,8 @@ xmlns:android="http://schemas.android.com/apk/res/android">
             android:layout_alignBottom="@+id/TF_location"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:padding="4dp"
+            android:layout_margin="7dp"
             android:onClick="onClick"
             android:text="Find" />
 

@@ -1,6 +1,7 @@
 package com.stayfit.app.stayfitBharat;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
@@ -26,6 +27,8 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
+import static android.content.Context.MODE_PRIVATE;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,6 +52,8 @@ public class HomeFragment extends Fragment {
     private String currentDateYear = "";
     private String currentDateMonth = "";
     private String currentDateDay = "";
+
+    private String message;
 
     private String currentFoodId;
     private String currentFoodName;
@@ -197,6 +202,24 @@ public class HomeFragment extends Fragment {
 
         /* Calcualte number of calories today */
         calcualteNumberOfCalEatenToday(stringFdDate);
+
+        /* Now we will get some data from shared preferences*/
+        SharedPreferences pref = getContext().getSharedPreferences("IntakeAlertUser", MODE_PRIVATE);
+
+        int usersCalorieGoal = pref.getInt("usersCalorieGoal", 0);
+        int intFdcetEatenEnergy = pref.getInt("intFdcetEatenEnergy", 0);
+        int textViewBodyResult = pref.getInt("textViewBodyResult", 0);
+
+        //Now will change the color of the text for extra calorie intake and also provide toast popups to user.
+        if (usersCalorieGoal == intFdcetEatenEnergy) {
+            Toast.makeText(getContext(), "Congrats! You are full for the day.", Toast.LENGTH_SHORT).show();
+        } else if (intFdcetEatenEnergy > usersCalorieGoal && textViewBodyResult < 0) {
+            TextView textViewBodyRemaining = (TextView) getActivity().findViewById(R.id.textViewBodyRemaining);
+            textViewBodyRemaining.setTextColor(Color.RED);
+            int extra = intFdcetEatenEnergy - usersCalorieGoal;
+            Toast.makeText(getContext(), "Alert! You consumed " + extra + " extra calories.", Toast.LENGTH_LONG).show();
+        }
+
 
 
 
@@ -1222,6 +1245,9 @@ public class HomeFragment extends Fragment {
             TextView textViewBodyGoalWithActivity = (TextView) getActivity().findViewById(R.id.textViewBodyGoalWithActivity);
             textViewBodyGoalWithActivity.setText(stringGoalEnergyWithActivityAndDiet);
 
+        //convert the goal value to integer and store it in variable
+        int usersCalorieGoal = Integer.parseInt(stringGoalEnergyWithActivityAndDiet);
+
             // TextView Food
             TextView textViewBodyFood = (TextView) getActivity().findViewById(R.id.textViewBodyFood);
             textViewBodyFood.setText("" + intFdcetEatenEnergy);
@@ -1237,9 +1263,18 @@ public class HomeFragment extends Fragment {
             int textViewBodyResult = intGoalEnergyWithActivityAndDiet - intFdcetEatenEnergy;
 
             TextView textViewBodyRemaining = (TextView) getActivity().findViewById(R.id.textViewBodyRemaining);
+
+        //show notification if calorie goal is reached
             textViewBodyRemaining.setText("" + textViewBodyResult);
 
+        //Save the values in Local Storage
+        SharedPreferences pref = getContext().getSharedPreferences("IntakeAlertUser", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
 
+        editor.putInt("usersCalorieGoal", usersCalorieGoal);
+        editor.putInt("intFdcetEatenEnergy", intFdcetEatenEnergy);
+        editor.putInt("textViewBodyResult", textViewBodyResult);
+        editor.commit();
 
         db.close();
     } // calcualteNumberOfCalEatenToday

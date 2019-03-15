@@ -37,14 +37,19 @@
             </intent-filter>
         </activity>
         <activity android:name="com.stayfit.app.stayfitBharat.WelcomeActivity"></activity>
-        <activity android:name="com.stayfit.app.stayfitBharat.SignUp" />
-        <activity android:name="com.stayfit.app.stayfitBharat.SignUpGoal" />
+        <activity
+            android:name="com.stayfit.app.stayfitBharat.SignUp"
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" />
+        <activity
+            android:name="com.stayfit.app.stayfitBharat.SignUpGoal"
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" />
         <activity
             android:name="com.stayfit.app.stayfitBharat.FragmentActivity"
             android:label="@string/title_activity_fragment" />
         <activity
             android:name="com.stayfit.app.stayfitBharat.MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps"
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" />
     </application>
 
 </manifest>

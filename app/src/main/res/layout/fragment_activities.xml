@@ -26,6 +26,7 @@
         android:padding="4dp"
         android:layout_marginBottom="188dp"
         android:layout_marginStart="27dp"
+        android:theme="@style/Theme.MaterialComponents"
         android:text="Start Pedometer" />
 
     <android.support.design.button.MaterialButton
@@ -36,6 +37,7 @@
         android:layout_alignBottom="@+id/btn_start"
         android:layout_alignParentEnd="true"
         android:padding="4dp"
+        android:theme="@style/Theme.MaterialComponents"
         android:layout_marginEnd="28dp"
         android:text="Stop Pedometer" />
 
@@ -46,6 +48,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="59dp"
+        android:theme="@style/Theme.MaterialComponents"
         android:onClick="onClick"
         android:text="Nearby Places" />
 
